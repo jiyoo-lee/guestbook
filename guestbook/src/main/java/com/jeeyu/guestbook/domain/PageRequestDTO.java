@@ -18,6 +18,13 @@ public class PageRequestDTO {
     // 페이지 당 출력 할 데이터 개수
     private int size;
 
+    //검색 타입
+    private String type;
+
+    //검색어
+    private String keyword;
+
+
     //기본 값 설정을 위한 생성자
     public PageRequestDTO(){
         this.page = 1;

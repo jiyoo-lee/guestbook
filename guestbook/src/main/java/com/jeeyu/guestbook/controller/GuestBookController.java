@@ -73,6 +73,8 @@ public class GuestBookController {
         log.info("dto: " + dto);
         guestBookService.modify(dto);
         redirectAttributes.addAttribute("page",requestDTO.getPage());
+        redirectAttributes.addAttribute("type",requestDTO.getType());
+        redirectAttributes.addAttribute("keyword",requestDTO.getKeyword());
         redirectAttributes.addAttribute("gno",dto.getGno());
         return "redirect:/guestbook/read";
     }
@@ -84,6 +86,5 @@ public class GuestBookController {
         redirectAttributes.addFlashAttribute("msg", gno + " 삭제");
         return "redirect:/guestbook/list";
     }
-
 
 }
